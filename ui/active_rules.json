@@ -1,0 +1,14 @@
+[
+    {
+        "code": "Rule.count(derive=Customer.unpaid_sales_count, as_count_of=Sale, where=lambda row: row.paid == False)",
+        "description": "Counts the number of unpaid sales associated with a customer.",
+        "name": "Customer Unpaid Sales Count",
+        "use_case": "Customer's unpaid sales must not exceed 5."
+    },
+    {
+        "code": "Rule.sum(derive=Dealer.total_stock, as_sum_of=Inventory.stock_amount)",
+        "description": "Sum of car stock inventory should not exceed dealer's limits.",
+        "name": "Car Inventory Stock Limit",
+        "use_case": "Total car stock must not exceed the dealer's inventory limit."
+    }
+]
